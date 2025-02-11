@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potenciação com qualquer base e expoente</title>
+</head>
+<body>
+    <h2>Vamos brincar de pontenciação com o MathPow</h2>
+    <label for="base">Digite a base:</label>
+    <input type="number" id="base"><br>
+    <label for="expoente">Digite o expoente:</label>
+    <input type="number" id="expoente"><br>
+    <button onclick="potencializar()">Potencializar!</button>
+
+
+    <script>
+        function potencializar(){
+            var base = document.getElementById('base').value;
+            var expoente = document.getElementById('expoente').value;
+           
+            for(var i=0; i<=expoente;i++){
+                
+                    document.write(base+"<sup>"+i+"</sup> = ");
+                    document.write(Math.pow(base,i)+"<br>");
+                }
+                
+            }
+            
+        
+    </script>
+
+</body>
+</html>

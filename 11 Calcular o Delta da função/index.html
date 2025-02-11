@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular o Delta da função</title>
+</head>
+<body>
+
+    <h2>Vamos calcular o delta da função:</h2>
+
+    <h3>&Delta; = b<sup>2</sup>-4.a.c</h3>
+    <label for="a">Valor de a: </label>
+    <input type="number" id="a" min="0" max="100"> <br>
+    <label for="b">Valor de b: </label>
+    <input type="number" id="b" min="0" max="100"> <br>
+    <label for="c">Valor de c: </label>
+    <input type="number" id="c" min="0" max="100"> <br><br>
+
+    <button onclick="calcularDelta()">Calcular o &Delta;</button>
+
+    <p></p>
+
+    <div id="resultadoDelta"></div>
+
+    <script>
+        function calcularDelta(){
+            var a = document.getElementById('a').value;
+            var b = document.getElementById('b').value;
+            var c = document.getElementById('c').value;
+
+            resultadoHTML = "";
+
+            resultadoHTML += "&Delta; = "+b+"<sup>2</sup> - 4 * "+a+" * " + c + '<br>';
+            resultadoHTML += "&Delta; = "+ b*b +" - 4 * "+a+" * " + c + '<br>';
+            resultadoHTML += "&Delta; = "+ b*b +" - "+4*a+" * " + c + '<br>';
+            resultadoHTML += "&Delta; = "+ b*b +" - "+4*a*c + '<br>';
+            resultadoHTML += "&Delta; = "+ parseInt(b*b-4*a*c) + '<br>';
+            document.getElementById("resultadoDelta").innerHTML=resultadoHTML;
+        }
+    </script>
+    
+</body>
+</html>

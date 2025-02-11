@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem crescente de caracteres</title>
+</head>
+<body>
+    <h2>Vamos colocar os caracteres em ordem crescente</h2>
+
+    <label for="texto">Informe aqui seu texto: </label>
+    <input type="text" id="texto" minlength=2 maxlength=100><br>
+    <button onclick="ordenar()">Ordenar!</button>
+    <div id="resultado"></div>
+
+    <script>
+        function ordenar(){
+            var arr = document.getElementById('texto').value.split('');
+            var resultadoHTML = document.getElementById('resultado');
+            resultadoHTML.innerHTML = "Não ordenado:<br>" +arr.join(' ') + '<br><br>';
+            var tmp;
+            
+            for(var i=0; i<arr.length-1;i++){
+                for(var j=i+1;j<arr.length; j++){
+                    if(arr[i]>arr[j]){
+                        tmp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j]=tmp;
+                    }
+                }
+            }
+            resultadoHTML.innerHTML += 'Ordenado:<br>'+ arr.join(' ');
+        }
+    </script>
+
+</body>
+</html>

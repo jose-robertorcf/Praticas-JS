@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receber 3 números</title>
+</head>
+<body>
+    <h1>Exercício 3 - Receber 3 números</h1>
+
+    <script>
+        var numero01 = prompt("Informe primeiro número", "100");
+        var numero02 = prompt("Informe segundo número", "200");
+        var numero03 = prompt("Informe terceiro número", "300");
+        if((numero01>numero02)&&(numero01>numero03)){mensagem = "O primeiro número é maior"}
+        else if((numero02>numero01)&&(numero02>numero03)){mensagem = "O segundo número é maior"}
+        else if((numero03>numero01)&&(numero03>numero02)){mensagem = "O terceiro número é maior"}
+        else{mensagem = "Os números são iguais ou nada foi informado"}
+
+        alert(mensagem);
+
+
+    </script>
+
+</body>
+</html>

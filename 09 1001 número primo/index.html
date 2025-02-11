@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1001º número primo</title>
+</head>
+<body>
+    <script>
+        var primosEncontrados = 0;
+        for(dividendo =2; primosEncontrados<1001; dividendo++){
+            var ehPrimo=true;
+            for(divisor = 2; dividendo>divisor; divisor++){
+                if(dividendo%divisor==0){
+                    ehPrimo=false;
+                    break;
+                }
+            }
+            if (Boolean(ehPrimo)){primosEncontrados++}
+        }
+        document.write("O 1001º número primo é:");
+        document.write(--dividendo + "<br><br>"); //é necessário tirar 1 no dividendo porque ele é incrementado no primeiro laço
+    </script>
+</body>
+</html>
